@@ -45,9 +45,7 @@ class Tohru {
 	registerRoutesIn(routePath) {
 		fs.readdirAsync(routePath).then(files => {
 			for (const file of files) {
-				let fileExtension = file.split('.')[file.split('.').length - 1];
-
-				if (fileExtension !== 'js') continue;
+				if (!file.endsWith('js')) continue;
 
 				let RouteClass = require(path.join(routePath, file));
 				let route = new RouteClass();
