@@ -7,7 +7,7 @@ class BaseRouteGET extends Route {
 
 	async run(ctx, next) {
 		ctx.state = { title: 'Tohru', body: 'Tohru - A blazingly fast pomf-like upload service that doesn\'t suck.' };
-		ctx.render('index.hbs');
+		await ctx.render('index.hbs');
 
 		return next();
 	}

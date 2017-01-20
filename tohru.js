@@ -11,7 +11,8 @@ tohru
 	.use(tohru.handlers.xResponseTime)
 	.use(tohru.handlers.logger)
 	.use(tohru.handlers.hbs)
-	.registerRoutesIn(path.join(__dirname, 'routes'))
 	.use(tohru.handlers.routes)
 	.use(tohru.handlers.routeMethods)
+	.use(tohru.handlers.static)
+	.registerRoutesIn(path.join(__dirname, 'routes'))
 	.start();
