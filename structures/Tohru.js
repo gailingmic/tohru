@@ -2,10 +2,10 @@ const Koa = require('koa');
 const Router = require('koa-router');
 const helmet = require('koa-helmet');
 const hbs = require('koa-views');
+const serveStatic = require('koa-static2');
 const lamu = require('lamu')();
-const path = require('path');
 const fs = global.Promise.promisifyAll(require('fs'));
-const koaStatic = require('koa-static2');
+const path = require('path');
 
 class Tohru {
 	constructor(settings) {
@@ -30,7 +30,7 @@ class Tohru {
 				lamu.log({ label: 'success', text: `${ctx.method} ${ctx.url} - ${ms}ms` });
 			},
 			hbs: hbs(path.join(__dirname, '..', 'views'), { map: { hbs: 'handlebars' } }),
-			static: koaStatic('css', path.join(__dirname, '..', 'assets/css')),
+			static: serveStatic('assets', path.join(__dirname, '..', 'assets')),
 			routes: this.router.routes(),
 			routeMethods: this.router.allowedMethods()
 		};
