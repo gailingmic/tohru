@@ -23,9 +23,9 @@
     "bluebird": "^3.4.7",
     "handlebars": "^4.0.6",
     "koa": "^2.0.0",
-    "koa-better-serve": "^1.0.0",
     "koa-helmet": "^3.1.0",
     "koa-router": "^7.0.1",
+    "koa-static2": "^0.1.8",
     "koa-views": "^5.2.0",
     "lamu": "^0.1.0"
   }
