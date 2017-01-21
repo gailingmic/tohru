@@ -3,7 +3,7 @@
 ### 🚅 A blazingly fast pomf-like upload service that doesn't suck.
 
 <p align="center">
-	<img src="http://i.imgur.com/j460cR0.jpg" width="850" />
+	<img src="http://i.imgur.com/j460cR0.jpg" width="890" />
 </p>
 
 ## Quick Start
