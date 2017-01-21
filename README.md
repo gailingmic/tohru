@@ -14,7 +14,7 @@
 
 ## Sites using tohru
 
-- [tohru.moe](https://sao.js.org/): 🚀 Futuristic scaffolding tool.
+- [tohru.moe](): 🚀 A blazingly fast pomf-like upload service that doesn't suck.
 
 - Feel free to add yours here.
 

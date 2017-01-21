@@ -1,18 +1,12 @@
-global.Promise = require('bluebird');
-
 const path = require('path');
-
 const Tohru = require('./structures/Tohru');
 
-const tohru = new Tohru({ port: 3000 });
+const tohru = new Tohru({
+	port: 3000,
+	assets: 'assets',
+	assetsPath: path.join(__dirname, 'assets'),
+	images: 'images',
+	imagesPath: path.join(__dirname, 'images')
+});
 
-tohru
-	.use(tohru.handlers.helmet)
-	.use(tohru.handlers.xResponseTime)
-	.use(tohru.handlers.logger)
-	.use(tohru.handlers.hbs)
-	.use(tohru.handlers.static)
-	.use(tohru.handlers.routes)
-	.use(tohru.handlers.routeMethods)
-	.registerRoutesIn(path.join(__dirname, 'routes'))
-	.start();
+tohru.start();

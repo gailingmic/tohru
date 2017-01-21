@@ -6,6 +6,11 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="/assets/css/style.css">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/min/dropzone.min.js"></script>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
 		<title>{{ title }}</title>
 	</head>
 	<body>
@@ -13,12 +18,12 @@
 			<div class="jumbotron">
 				<h1 id="tohru">Tohru</h1>
 				<h3>{{ subtitle }}</h3>
-				<form id="upload-form" enctype="multipart/form-data" method="post" action="upload.php?output=html">
-					<button id="upload-btn" class="btn" type="button">Select or drop file(s)</button>
-					<input type="file" id="upload-input" name="files[]" multiple data-max-size="250MiB">
-					<input type="submit" value="Submit">
-				</form>
-				<ul id="upload-filelist"></ul>
+				<button id="uploadContainer" class="btn" type="button">Select or drop file(s)</button>
+				<div id="upload-filelist">
+					<div id="uploads">
+						<p class="links"></p>
+					</div>
+				</div>
 			</div>
 			<p class="alert">
 				Have an illegal and/or copyrighted file to report? Please email by clicking here<br>
@@ -51,6 +56,4 @@
 			</nav>
 		</div>
 	</body>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="/assets/js/script.js"></script>
 </html>

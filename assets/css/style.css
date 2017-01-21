@@ -73,14 +73,8 @@ body, html {
 	text-decoration: none;
 }
 
-#upload-btn,
-.js #upload-input,
-.js input[type=submit] {
-	display: none;
-}
-
-.js #upload-btn {
-	display: inline-block;
+#upload-filelist {
+	margin: 1.5rem auto;
 }
 
 .alert {
