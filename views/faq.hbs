@@ -4,49 +4,51 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="/assets/css/style.css">
 		<title>{{ title }}</title>
 	</head>
 	<body>
-		<main>
-			<header>
-				<h1>{{ subtitle }}</h1>
-			</header>
-			<section>
-				<h4>What is Tohru?</h4>
-				<p id="a">
-					Tohru is a simple to use free file hosting service with literally no BS to it.
-					It lets you share your photos, documents, music, videos and more with others online.
-				</p>
+		<div class="container">
+			<div class="jumbotron faq">
+				<h1 id="tohru"><a href="/">Tohru</a></h1>
+				<h2>{{ subtitle }}</h2>
+			</div>
+			<div class="faq-site">
+			<h5 class="alert">What is Tohru?</h4>
+			<p>
+				Tohru is a simple to use free file hosting service with literally no BS to it.
+				It lets you share your photos, documents, music, videos and more with others online.
+			</p>
 
-				<h4>What content is allowed?</h4>
-				<p id="a">
-					As long as it isn't malware (Which will be automatically removed.) or anything that violates US law I don't care what you host.
-				</p>
-				
-				<h4>Do you keep logs of uploaded content?</h4>
-				<p id="a">
-					We don't collect or log any data of our users in respect for privacy.
-					We only have files uploaded by our users.
-				</p>
+			<h5 class="alert">What content is allowed?</h5>
+			<p>
+				As long as it isn't malware (Which will be automatically removed.) or anything that violates US law I don't care what you host.
+			</p>
+			
+			<h5 class="alert">Do you keep logs of uploaded content?</h5>
+			<p>
+				We don't collect or log any data of our users in respect for privacy.
+				We only have files uploaded by our users.
+			</p>
 
-				<h4>Can you remove x file for y reason?</h4>
-				<p id="a">
-					If the reason is semi-valid and you ask nicely sure, if it's illegal I will foward the proper info to the authorities.
-					Email me at abuse@tohru.moe
-				</p>
+			<h5 class="alert">Can you remove x file for y reason?</h5>
+			<p>
+				If the reason is semi-valid and you ask nicely sure, if it's illegal I will foward the proper info to the authorities.
+				Email me at abuse@tohru.moe
+			</p>
 
-				<h4>What is your PGP key because I am a whore for security?</h4>
-				<p id="a">
-					You can find my public key here and good on you boo.
-				</p>
+			<h5 class="alert">What is your PGP key because I am a whore for security?</h5>
+			<p>
+				You can find my public key here and good on you boo.
+			</p>
 
-				<h4>I have a question...</h4>
-				<p id="a">
-					Send us an email at crawl@tohru.moe and let's talk~~
-				</p>
-			</section>
-			<footer>
+			<h5 class="alert">I have a question...</h5>
+			<p>
+				Send us an email at crawl@tohru.moe and let's talk~~
+			</p>
+			</div>
+			<nav>
 				<ul>
 					<li>
 						<a href="/">tohru</a>
@@ -70,7 +72,8 @@
 						<a href="/blog">blog</a>
 					</li>
 				</ul>
-			</footer>
-		</main>
+			</nav>
+		</div>
 	</body>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </html>

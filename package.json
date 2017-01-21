@@ -4,7 +4,8 @@
   "description": "woosh",
   "main": "tohru.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --harmony tohru.js"
   },
   "repository": {
     "type": "git",
@@ -28,5 +29,8 @@
     "koa-static2": "^0.1.8",
     "koa-views": "^5.2.0",
     "lamu": "^0.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
