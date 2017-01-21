@@ -2,7 +2,7 @@ const Route = require('../structures/Route');
 
 class UploadPOST extends Route {
 	constructor() {
-		super('/upload', 'post');
+		super('/upload(.php)?', 'post');
 	}
 
 	async run(ctx, next) {

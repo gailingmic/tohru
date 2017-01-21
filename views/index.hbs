@@ -19,9 +19,17 @@
 				<h1>{{ title }}</h1>
 				<h3>{{ subtitle }}</h3>
 				<button id="uploadContainer" class="btn" type="button">Select or drop file(s)</button>
-				<div id="upload-filelist">
-					<div id="uploads">
-						<p class="links"></p>
+				<div id="uploads">
+					<div id="template" class="row">
+						<div class="col"></div>
+						<div class="col col-md-auto">
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="50" aria-valuemax="100" data-dz-uploadprogress></div>
+							</div>
+							<p data-dz-errormessage></p>
+							<p class="links"></p>
+						</div>
+						<div class="col"></div>
 					</div>
 				</div>
 			</div>

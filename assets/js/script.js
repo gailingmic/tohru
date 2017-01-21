@@ -1,14 +1,5 @@
-function createDropzoneContainer() {
-	var div = document.createElement('div');
-	div.id = 'dropzone';
-
-	document.getElementById('uploadContainer').appendChild(div);
-
-	initializeDropzone();
-}
-
 function initializeDropzone() {
-	var previewNode = document.querySelector('#uploads');
+	var previewNode = document.getElementById('template');
 	previewNode.id = '';
 	var previewTemplate = previewNode.parentNode.innerHTML;
 	previewNode.parentNode.removeChild(previewNode);
@@ -19,32 +10,37 @@ function initializeDropzone() {
 		maxFilesize: 250,
 		parallelUploads: 10,
 		uploadMultiple: false,
-		previewsContainer: 'div#upload-filelist',
+		previewsContainer: '#uploads',
 		previewTemplate: previewTemplate,
 		createImageThumbnails: false,
 		maxFiles: 1000,
 		autoProcessQueue: true,
-		clickable: ".btn",
+		clickable: '.btn',
 		/* headers: { 'auth': upload.token },*/
 		init: function() {
 			this.on('addedfile', function(file) {
-				document.getElementById('upload-filelist');
+				document.getElementById('uploads');
 			});
 		}
 	});
 
-	dropzone.on('success', function (file, response) {
-		console.log(response);
+	dropzone.on('success', function(file, response) {
+		if (response.status !== 200) {
+			var span = document.createElement('span');
+			span.innerHTML = response.description;
+			return file.previewTemplate.querySelector('.link').appendChild(span);
+		}
 
+		var links = document.createElement('a');
+		links.href = 'http://localhost:3000/images/' + response[0].filename;
+		links.target = '_blank';
+		links.innerHTML = 'http://localhost:3000/images/' + response[0].filename;
 
-		var a = document.createElement('a');
-		a.href = 'http://localhost:3000/images/' + response[0].filename;
-		a.target = '_blank';
-		a.innerHTML = 'http://localhost:3000/images/' + response[0].filename;
-		file.previewTemplate.querySelector('.links').appendChild(a);
+		file.previewTemplate.querySelector('.links').appendChild(links);
+		file.previewTemplate.querySelector('.progress').style.display = 'none';
 	});
 }
 
 window.onload = function() {
-	createDropzoneContainer();
+	initializeDropzone();
 };
