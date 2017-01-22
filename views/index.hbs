@@ -15,23 +15,25 @@
 	</head>
 	<body>
 		<div class="container">
+			<div class="template hidden">
+				<div class="row">
+					<div class="status col">
+						<div class="file-progress progress">
+							<div class="progress-bar" role="progressbar" data-dz-uploadprogress=""></div>
+						</div>
+					</div>
+					<div class="link hidden col">
+						<a target="_blank" href="" class="link-href"></a>
+					</div>
+				</div>
+			</div>
 			<div class="jumbotron">
 				<h1>{{ title }}</h1>
 				<h3>{{ subtitle }}</h3>
 				<button id="uploadContainer" class="btn" type="button">Select or drop file(s)</button>
-				<div id="uploads">
-					<div id="template" class="row">
-						<div class="col"></div>
-						<div class="col col-md-auto">
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="50" aria-valuemax="100" data-dz-uploadprogress></div>
-							</div>
-							<p data-dz-errormessage></p>
-							<p class="links"></p>
-						</div>
-						<div class="col"></div>
-					</div>
-				</div>
+			<div class="preview">
+				<div id="preview" class="preview-container"></div>
+			</div>
 			</div>
 			<p class="alert">
 				Have an illegal and/or copyrighted file to report? Please email by clicking here<br>

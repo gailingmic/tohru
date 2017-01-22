@@ -15,10 +15,14 @@ body, html {
 
 .container {
 	margin-top: 2rem;
-	max-width: 770px;
+	max-width: 900px;
 	text-align: center;
 	justify-content: center;
 	align-items: center;
+}
+
+.preview-container {
+	margin-top: 2rem;
 }
 
 .jumbotron {
@@ -73,29 +77,25 @@ body, html {
 	text-decoration: none;
 }
 
-#uploads {
-	margin-top: 1.5rem;
-	margin-bottom: -1rem;
-	text-align: center;
+.hidden {
+	display: none;
 }
 
 .progress {
-	margin: 0 auto;
-	text-align: center;
-	min-width: 400px;
+	margin-bottom: 0.5rem;
 }
 
-.links {
-	margin: 0 auto;
+.link {
+	margin-bottom: 0.1rem;
 }
 
-.links a {
+.link a {
 	color: #F5F5F5;
 	text-decoration: none;
 	cursor: pointer;
 }
 
-.links a:hover {
+.link a:hover {
 	color: #CCCCCC;
 }
 
